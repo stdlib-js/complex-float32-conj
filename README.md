@@ -45,32 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/complex-float32-conj
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var conj = require( '@stdlib/complex-float32-conj' );
+import conj from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-conj@deno/mod.js';
 ```
 
 #### conj( z )
@@ -78,7 +60,7 @@ var conj = require( '@stdlib/complex-float32-conj' );
 Returns the [complex conjugate][complex-conjugate] of a single-precision complex floating-point number.
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@deno/mod.js';
 
 var z = new Complex64( 5.0, 3.0 );
 var str = z.toString();
@@ -112,10 +94,10 @@ str = v.toString();
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var Complex64 = require( '@stdlib/complex-float32-ctor' );
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
-var filledarrayBy = require( '@stdlib/array-filled-by' );
-var conj = require( '@stdlib/complex-float32-conj' );
+import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-ctor@deno/mod.js';
+import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
+import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
+import conj from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32-conj@deno/mod.js';
 
 function random() {
     return new Complex64( discreteUniform( -10, 10 ), discreteUniform( -10, 10 ) );
@@ -140,111 +122,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/complex/float32/conj.h"
-```
-
-#### stdlib_complex64_conj( z )
-
-Returns the [complex conjugate][complex-conjugate] of a single-precision complex floating-point number.
-
-```c
-#include "stdlib/complex/float32/ctor.h"
-#include "stdlib/complex/realf.h"
-#include "stdlib/complex/imagf.h"
-
-stdlib_complex64_t z = stdlib_complex64( 5.0f, 2.0f );
-
-// ...
-
-stdlib_complex64_t v = stdlib_complex64_conj( z );
-
-float re = stdlib_realf( v );
-// returns 5.0f
-
-float im = stdlib_imagf( v );
-// returns -2.0f
-```
-
-The function accepts the following arguments:
-
--   **z**: `[in] stdlib_complex64_t` single-precision complex floating-point number.
-
-```c
-stdlib_complex64_t stdlib_complex64_conj( const stdlib_complex64_t z );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/complex/float32/conj.h"
-#include "stdlib/complex/realf.h"
-#include "stdlib/complex/imagf.h"
-#include "stdlib/complex/float32/ctor.h"
-#include <stdio.h>
-
-int main( void ) {
-    const stdlib_complex64_t x[] = {
-        stdlib_complex64( 5.0f, 2.0f ),
-        stdlib_complex64( -2.0f, 1.0f ),
-        stdlib_complex64( 0.0f, -0.0f ),
-        stdlib_complex64( 0.0f/0.0f, 0.0f/0.0f )
-    };
-
-    stdlib_complex64_t z;
-    stdlib_complex64_t v;
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        z = x[ i ];
-        v = stdlib_complex64_conj( z );
-        printf( "conj(%f + %fi) = %f + %fi\n", stdlib_realf( z ), stdlib_imagf( z ), stdlib_realf( v ), stdlib_imagf( v ) );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -280,7 +158,7 @@ int main( void ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -347,13 +225,13 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/complex/float64/conj]: https://github.com/stdlib-js/complex-float64-conj
+[@stdlib/complex/float64/conj]: https://github.com/stdlib-js/complex-float64-conj/tree/deno
 
-[@stdlib/complex/imagf]: https://github.com/stdlib-js/complex-imagf
+[@stdlib/complex/imagf]: https://github.com/stdlib-js/complex-imagf/tree/deno
 
-[@stdlib/complex/realf]: https://github.com/stdlib-js/complex-realf
+[@stdlib/complex/realf]: https://github.com/stdlib-js/complex-realf/tree/deno
 
-[@stdlib/complex/float32/reim]: https://github.com/stdlib-js/complex-float32-reim
+[@stdlib/complex/float32/reim]: https://github.com/stdlib-js/complex-float32-reim/tree/deno
 
 <!-- </related-links> -->
 
