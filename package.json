@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/complex-float32-conj",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Return the complex conjugate of a single-precision complex floating-point number.",
   "license": "Apache-2.0",
   "author": {
@@ -45,8 +45,8 @@
   "devDependencies": {
     "@stdlib/array-filled-by": "^0.3.0",
     "@stdlib/assert-is-complex64": "^0.2.2",
-    "@stdlib/complex-float32-imag": "^0.1.1",
-    "@stdlib/complex-float32-real": "^0.1.1",
+    "@stdlib/complex-float32-imag": "^0.1.2",
+    "@stdlib/complex-float32-real": "^0.1.2",
     "@stdlib/random-base-discrete-uniform": "^0.2.1",
     "@stdlib/random-base-randu": "^0.2.2",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
